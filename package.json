@@ -1,0 +1,16 @@
+{
+  "name": "arraytools",
+  "version": "1.0.0",
+  "description": "Pagina interactiva para visualizar y entender los metodos de un array en js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "array",
+    "npm"
+  ],
+  "author": "Julio Acevedo <jrab997@gmal.com>",
+  "license": "MIT"
+}
