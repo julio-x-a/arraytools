@@ -12,5 +12,8 @@
     "npm"
   ],
   "author": "Julio Acevedo <jrab997@gmal.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
 }

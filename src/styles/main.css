@@ -1,0 +1,8 @@
+body {
+  background-color: #22272e;
+  color: #fff;
+}
+
+.selected-val {
+  color: blue;
+}
