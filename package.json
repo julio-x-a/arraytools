@@ -4,6 +4,8 @@
   "description": "Pagina interactiva para visualizar y entender los metodos de un array en js",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack serve --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,5 +17,13 @@
   "license": "MIT",
   "dependencies": {
     "animate.css": "^4.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
   }
 }
