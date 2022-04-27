@@ -1,3 +1,4 @@
+import './styles/main.css';
 import ANI from './animations.js';
 
 const d = document;
