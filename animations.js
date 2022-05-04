@@ -45,8 +45,21 @@ const wobbleHorBottom = [
   }
 ];
 
+const rollInBlurredTop = [
+  {
+    transform: 'translateY(-800px) rotate(-720deg)',
+    fitler: 'blur(50px)',
+    opacity: 0
+  },
+  {
+    transform: 'translateY(0) rotate(0deg)',
+    fitler: 'blur(0px)',
+    opacity: 1
+  }
+];
 export default {
   spinning,
   slideBlurred,
-  wobbleHorBottom
+  wobbleHorBottom,
+  rollInBlurredTop
 };
