@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "tailwindcss": "^3.0.24",
     "vite": "^2.9.5"
   },
   "keywords": [
@@ -17,5 +18,6 @@
     "npm"
   ],
   "author": "Julio Acevedo <jrab997@gmal.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }

@@ -1,4 +1,4 @@
-import './styles/style.css';
+import './output.css';
 import ANI from './animations.js';
 
 const d = document;
@@ -40,7 +40,7 @@ const popMethod = async () => {
     try {
       let state = await element?.animate(ANI.wobbleHorBottom, {
         duration: 250,
-        iterations: 1
+        iterations: 1,
       }).finished;
       if (state.playState === 'finished') {
         let node = element.previousSibling;
