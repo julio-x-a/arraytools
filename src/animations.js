@@ -57,9 +57,37 @@ const rollInBlurredTop = [
     opacity: 1
   }
 ];
+
+const pulsateFwd = [
+  {
+    transform: 'scale(1)'
+  },
+  {
+    transform: 'scale(1.1)',
+    offset: 0.5
+  },
+  {
+    transform: 'scale(1)'
+  }
+];
+
+const blink = [
+  {
+    opacity: 1
+  },
+  {
+    opacity: 0.2,
+    offset: 0.5
+  },
+  {
+    opacity: 1
+  }
+];
 export default {
   spinning,
   slideBlurred,
   wobbleHorBottom,
-  rollInBlurredTop
+  rollInBlurredTop,
+  pulsateFwd,
+  blink
 };

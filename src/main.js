@@ -17,6 +17,7 @@ function handlerButtons() {
   d.addEventListener('click', (e) => {
     if (e.target.matches('#at')) atMethod();
     if (e.target.matches('#pop')) popMethod();
+    if (e.target.matches('#push')) pushMethod();
   });
 }
 
@@ -27,7 +28,7 @@ function handlerButtons() {
 const atMethod = () => {
   let index = window.prompt('Type index');
   const element = arraypage().find(($span) => $span.id === index);
-  element?.animate(ANI.rollInBlurredTop, { duration: 1000, iterations: 1 });
+  element?.animate(ANI.blink, { duration: 250, iterations: 5 });
 };
 
 /**
@@ -42,7 +43,7 @@ const popMethod = async () => {
         iterations: 1
       }).finished;
       if (state.playState === 'finished') {
-        let node = element.nextSibling;
+        let node = element.previousSibling;
         if (node.textContent === ', ') node.remove();
         element?.remove();
       }
@@ -52,9 +53,17 @@ const popMethod = async () => {
   }
 };
 
+/**
+ * It takes the last element of the array, and inserts a new element after it.
+ */
 const pushMethod = () => {
   const newElement = prompt('Insert value:');
-  arraypage.at(-1).insertAdjacentText('afterend', ', ');
+  const lasElement = arraypage().at(-1);
+  const span = d.createElement('span');
+  span.id = +lasElement.id + 1;
+  span.textContent = newElement;
+  lasElement.after(', ', span);
+  arraypage().at(-1).animate(ANI.rollInBlurredTop, { duration: 1000, iterations: 1 });
 };
 
 /**
