@@ -4,7 +4,7 @@ import ANI from './animations.js';
 const d = document;
 
 /**
- * It returns an array of all the span elements in the array page.
+ * Returns an array of all the span elements in the array page.
  */
 const arraypage = () => Array.from(d.querySelectorAll('#array span'));
 
@@ -18,11 +18,12 @@ function handlerButtons() {
     if (e.target.matches('#at')) atMethod();
     if (e.target.matches('#pop')) popMethod();
     if (e.target.matches('#push')) pushMethod();
+    if (e.target.matches('#fill')) fillMethod();
   });
 }
 
 /**
- * It takes the index of the element you want to animate, finds the element with that index,
+ * Takes the index of the element you want to animate, finds the element with that index,
  * and then animates it.
  */
 const atMethod = () => {
@@ -32,7 +33,7 @@ const atMethod = () => {
 };
 
 /**
- * It removes the last element of the array, and then removes the comma that follows it.
+ * Removes the last element of the array, and then removes the comma that follows it.
  */
 const popMethod = async () => {
   const element = arraypage().at(-1);
@@ -40,7 +41,7 @@ const popMethod = async () => {
     try {
       let state = await element?.animate(ANI.wobbleHorBottom, {
         duration: 250,
-        iterations: 1,
+        iterations: 1
       }).finished;
       if (state.playState === 'finished') {
         let node = element.previousSibling;
@@ -54,7 +55,7 @@ const popMethod = async () => {
 };
 
 /**
- * It takes the last element of the array, and inserts a new element after it.
+ * Takes the last element of the array, and inserts a new element after it.
  */
 const pushMethod = () => {
   const newElement = prompt('Insert value:');
@@ -66,8 +67,13 @@ const pushMethod = () => {
   arraypage().at(-1).animate(ANI.rollInBlurredTop, { duration: 1000, iterations: 1 });
 };
 
+const fillMethod = () => {
+  const $array = d.getElementById('array');
+  $array.animate(ANI.slideOutLeft, { duration: 500, iterations: 1 });
+};
+
 /**
- * It loops through all the spans in the array and sets their id to their index.
+ * Loops through all the spans in the array and sets their id to their index.
  */
 function setIndex() {
   d.querySelectorAll('#array span').forEach(($span, index) => {

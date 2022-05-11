@@ -83,11 +83,30 @@ const blink = [
     opacity: 1
   }
 ];
+
+/**
+ * ----------------------------------------
+ *  EXITS
+ * ----------------------------------------
+ */
+
+const slideOutLeft = [
+  {
+    transform: 'translateX(0)'
+    // opacity: 1
+  },
+  {
+    transform: 'translateX(-100px)'
+    // opacity: 1
+  }
+];
+
 export default {
   spinning,
   slideBlurred,
   wobbleHorBottom,
   rollInBlurredTop,
   pulsateFwd,
-  blink
+  blink,
+  slideOutLeft
 };
