@@ -10,16 +10,17 @@
     <header>
       <nav class="">
         <ul class="flex flex-row justify-between">
-          <li class="hover:uppercase">Item</li>
+          <!-- <li class="hover:uppercase">Item</li>
           <li>Item</li>
-          <li>Item</li>
+          <li>Item</li> -->
         </ul>
       </nav>
     </header>
     <main class="flex-grow">
       <section class="array text-center mb-10">
         <h1 class="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-8xl" id="array">
-          [ <span>🍌</span>, <span>🍎</span>, <span>🍐</span> ]
+          [ <span class="transition ease-in-out hover:scale-110">🍌</span>,
+          <span>🍎</span>, <span>🍐</span> ]
         </h1>
       </section>
       <section class="array-methods">
@@ -206,10 +207,14 @@
     <footer class="p-4 mb-0 bg-slate-700">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
-          <a href="https://flowbite.com" class="flex items-center">
+          <a
+            href="https://github.com/julio-x-a/"
+            target="_blank"
+            class="flex items-center"
+          >
             <img
               src="./src/assets/perfil.jpg"
-              class="w-32 h-32 rounded-full grayscale hover:grayscale-0"
+              class="transition ease-in-out delay-150 w-32 h-32 sm:w-32h-32 md:w-52 md:h-52 rounded-full grayscale hover:grayscale-0 hover:scale-110"
               alt="Julio Acevedo"
             />
             <span
@@ -222,14 +227,16 @@
             <h2
               class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
             >
-              Resources
+              Recursos
             </h2>
             <ul class="text-gray-600 dark:text-gray-400">
               <li class="mb-4">
-                <a href="https://flowbite.com" class="hover:underline">Flowbite</a>
+                <a href="https://vitejs.dev/" class="hover:underline" target="_blank"
+                  >Vite js</a
+                >
               </li>
               <li>
-                <a href="https://tailwindcss.com/" class="hover:underline"
+                <a href="https://tailwindcss.com/" target="_blank" class="hover:underline"
                   >Tailwind CSS</a
                 >
               </li>
@@ -239,18 +246,14 @@
             <h2
               class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
             >
-              Follow us
+              Redes
             </h2>
             <ul class="text-gray-600 dark:text-gray-400">
               <li class="mb-4">
-                <a href="https://github.com/themesberg/flowbite" class="hover:underline"
-                  >Github</a
-                >
+                <a href="https://github.com/julio-x-a/" class="hover:underline">Github</a>
               </li>
               <li>
-                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline"
-                  >Discord</a
-                >
+                <a href="#" class="hover:underline">Discord</a>
               </li>
             </ul>
           </div>
