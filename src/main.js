@@ -52,11 +52,6 @@ const popMethod = async () => {
   }
 };
 
-const pushMethod = () => {
-  const newElement = prompt('Insert value:');
-  arraypage.at(-1).insertAdjacentText('afterend', ', ');
-};
-
 /**
  * It loops through all the spans in the array and sets their id to their index.
  */
