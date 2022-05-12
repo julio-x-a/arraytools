@@ -69,7 +69,7 @@ const pushMethod = () => {
 
 const fillMethod = () => {
   const $array = d.getElementById('array');
-  $array.animate(ANI.slideOutLeft, { duration: 500, iterations: 1 });
+  arraypage.forEach(($span) => {});
 };
 
 /**
