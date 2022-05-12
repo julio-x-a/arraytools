@@ -69,7 +69,21 @@ const pushMethod = () => {
 
 const fillMethod = () => {
   const $array = d.getElementById('array');
-  arraypage.forEach(($span) => {});
+  arraypage.forEach(($span) => {
+    try {
+      let state = await $span?.animate(ANI.wobbleHorBottom, {
+        duration: 250,
+        iterations: 1
+      }).finished;
+      if (state.playState === 'finished') {
+        let node = element.previousSibling;
+        if (node.textContent === ', ') node.remove();
+        element?.remove();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  });
 };
 
 /**
