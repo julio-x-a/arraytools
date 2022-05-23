@@ -45,7 +45,7 @@ const popMethod = async () => {
       }).finished;
       if (state.playState === 'finished') {
         let node = element.previousSibling;
-        if (node.textContent === ', ') node.remove();
+        if (node.textContent.startsWith(',')) node.remove();
         element?.remove();
       }
     } catch (error) {
@@ -64,26 +64,12 @@ const pushMethod = () => {
   span.id = +lasElement.id + 1;
   span.textContent = newElement;
   lasElement.after(', ', span);
-  arraypage().at(-1).animate(ANI.rollInBlurredTop, { duration: 1000, iterations: 1 });
+  arraypage().at(-1).animate(ANI.rollInBlurredTop, { duration: 500, iterations: 1 });
 };
 
 const fillMethod = () => {
   const $array = d.getElementById('array');
-  arraypage.forEach(($span) => {
-    try {
-      let state = await $span?.animate(ANI.wobbleHorBottom, {
-        duration: 250,
-        iterations: 1
-      }).finished;
-      if (state.playState === 'finished') {
-        let node = element.previousSibling;
-        if (node.textContent === ', ') node.remove();
-        element?.remove();
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  });
+  popAll();
 };
 
 /**
@@ -92,5 +78,25 @@ const fillMethod = () => {
 function setIndex() {
   d.querySelectorAll('#array span').forEach(($span, index) => {
     $span.id = index;
+  });
+}
+
+function popAll() {
+  let duration = 1000;
+  arraypage().map(async (element) => {
+    duration -= 100;
+    try {
+      let state = await element?.animate(ANI.wobbleHorBottom, {
+        duration,
+        iterations: 1
+      }).finished;
+      if (state.playState === 'finished') {
+        let node = element?.previousSibling;
+        if (node?.textContent.startsWith(',')) node?.remove();
+        element?.remove();
+      }
+    } catch (error) {
+      console.log(error);
+    }
   });
 }
