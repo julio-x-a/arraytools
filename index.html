@@ -1,179 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/d38888f9a3.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Document</title>
-  </head>
-  <body class="flex flex-col h-screen bg-slate-800">
-    <header>
-      <nav
-        class="flex flex-row justify-around bg-slate-700 py-5 cursor-pointer text-3xl sm:text-5xl"
-      >
-        <i
-          class="fa-brands fa-github-alt hover:text-slate-800 transition ease-in-out hover:scale-150"
-        ></i>
-        <i
-          class="fa-brands fa-linkedin hover:text-slate-800 transition ease-in-out hover:scale-150"
-        ></i>
-        <i
-          class="fa-brands fa-twitter hover:text-slate-800 transition ease-in-out hover:scale-150"
-        ></i>
-      </nav>
-    </header>
-    <main class="flex-grow">
-      <section class="array text-center mb-10 mt-10">
-        <h1 class="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-8xl :" id="array">
-          [ <span class="transition ease-in-out hover:scale-110">🍌</span>,
-          <span>🍎</span>, <span>🍐</span> ]
-        </h1>
-      </section>
-      <section class="array-methods mb-10">
-        <div
-          class="w-1/2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mx-auto"
-        >
-          <button
-            id="at"
-            type="button"
-            class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200"
-          >
-            at()
-          </button>
-          <button
-            id="pop"
-            type="button"
-            class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200"
-          >
-            pop()
-          </button>
-          <button
-            id="push"
-            type="button"
-            class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200"
-          >
-            push()
-          </button>
-          <button
-            id="fill"
-            type="button"
-            class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200"
-          >
-            fill()
-          </button>
-          <button
-            id="pop"
-            type="button"
-            class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200"
-          >
-            pop()
-          </button>
-          <button
-            id="pop"
-            type="button"
-            class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200"
-          >
-            pop()
-          </button>
-          <button
-            id="pop"
-            type="button"
-            class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200"
-          >
-            pop()
-          </button>
-          <button
-            id="pop"
-            type="button"
-            class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200"
-          >
-            pop()
-          </button>
-        </div>
-      </section>
-    </main>
 
-    <footer class="p-4 mb-0 bg-slate-700">
-      <div class="md:flex md:justify-between">
-        <div class="mb-6 md:mb-0">
-          <a
-            href="https://github.com/julio-x-a/"
-            target="_blank"
-            class="flex justify-center"
-          >
-            <img
-              src="./src/assets/perfil.jpg"
-              class="transition ease-in-out delay-150 w-32 h-32 sm:w-32h-32 md:w-52 md:h-52 rounded-full grayscale hover:grayscale-0 hover:scale-110"
-              alt="Julio Acevedo"
-            />
-            <span
-              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-            ></span>
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/d38888f9a3.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+
+<body class="flex flex-col h-screen bg-slate-800">
+  <header>
+    <nav class="flex flex-row justify-around bg-slate-700 py-5 cursor-pointer text-3xl sm:text-5xl">
+      <i class="fa-brands fa-github-alt hover:text-slate-800 transition ease-in-out hover:scale-150"></i>
+      <i class="fa-brands fa-linkedin hover:text-slate-800 transition ease-in-out hover:scale-150"></i>
+      <i class="fa-brands fa-twitter hover:text-slate-800 transition ease-in-out hover:scale-150"></i>
+    </nav>
+  </header>
+  <main class="flex-grow">
+    <section class="array text-center mb-10 mt-10">
+      <h1 class="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-8xl :" id="array">
+        [ <span class="transition ease-in-out hover:scale-110">🍌</span>,
+        <span>🍎</span>, <span>🍐</span> ]
+      </h1>
+    </section>
+    <section class="array-methods mb-10">
+      <div class="w-1/2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mx-auto">
+        <button id="at" type="button"
+          class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200">
+          at()
+        </button>
+        <button id="pop" type="button"
+          class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200">
+          pop()
+        </button>
+        <button id="push" type="button"
+          class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200">
+          push()
+        </button>
+        <button id="fill" type="button"
+          class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200">
+          fill()
+        </button>
+        <button id="pop" type="button"
+          class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200">
+          pop()
+        </button>
+        <button id="pop" type="button"
+          class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200">
+          pop()
+        </button>
+        <button id="pop" type="button"
+          class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200">
+          pop()
+        </button>
+        <button id="pop" type="button"
+          class="xt-button py-2.5 px-3.5 text-sm rounded-md font-medium leading-snug tracking-wider uppercase text-gray-900 bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 on:bg-gray-200">
+          pop()
+        </button>
+      </div>
+    </section>
+  </main>
+  <footer class="p-4 mb-0 bg-slate-700">
+    <div class="md:flex md:justify-between">
+      <div class="mb-6 md:mb-0">
+        <a href="https://github.com/julio-x-a/" target="_blank" class="flex justify-center">
+          <img src="./src/assets/perfil.jpg"
+            class="w-32 h-32 sm:w-32h-32 md:w-52 md:h-52 rounded-full grayscale hover:grayscale-0"
+            alt="Julio Acevedo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+        </a>
+      </div>
+      <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            Recursos
+          </h2>
+          <ul class="text-gray-600 dark:text-gray-400">
+            <li class="mb-4">
+              <a href="https://vitejs.dev/" class="hover:underline" target="_blank">Vite js</a>
+            </li>
+            <li>
+              <a href="https://tailwindcss.com/" target="_blank" class="hover:underline">Tailwind CSS</a>
+            </li>
+          </ul>
         </div>
-        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-          <div>
-            <h2
-              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-            >
-              Recursos
-            </h2>
-            <ul class="text-gray-600 dark:text-gray-400">
-              <li class="mb-4">
-                <a href="https://vitejs.dev/" class="hover:underline" target="_blank"
-                  >Vite js</a
-                >
-              </li>
-              <li>
-                <a href="https://tailwindcss.com/" target="_blank" class="hover:underline"
-                  >Tailwind CSS</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2
-              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-            >
-              Redes
-            </h2>
-            <ul class="text-gray-600 dark:text-gray-400">
-              <li class="mb-4">
-                <a href="https://github.com/julio-x-a/" class="hover:underline">Github</a>
-              </li>
-              <li>
-                <a href="#" class="hover:underline">Discord</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2
-              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-            >
-              Legal
-            </h2>
-            <ul class="text-gray-600 dark:text-gray-400">
-              <li class="mb-4">
-                <a href="#" class="hover:underline">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-              </li>
-            </ul>
-          </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            Redes
+          </h2>
+          <ul class="text-gray-600 dark:text-gray-400">
+            <li class="mb-4">
+              <a href="https://github.com/julio-x-a/" class="hover:underline">Github</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline">Discord</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            Legal
+          </h2>
+          <ul class="text-gray-600 dark:text-gray-400">
+            <li class="mb-4">
+              <a href="#" class="hover:underline">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <div class="mx-auto sm:flex sm:items-center sm:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-          >© 2022 Julio Acevedo™.
-        </span>
-      </div>
-    </footer>
-    <script src="./src/main.js" type="module"></script>
-  </body>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <div class="mx-auto sm:flex sm:items-center sm:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 Julio Acevedo™.
+      </span>
+    </div>
+  </footer>
+  <script src="./src/main.js" type="module"></script>
+</body>
+
 </html>

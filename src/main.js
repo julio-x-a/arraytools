@@ -1,5 +1,7 @@
 import './output.css';
 import ANI from './animations.js';
+import Swal from 'sweetalert2'
+
 
 const d = document;
 
@@ -35,14 +37,10 @@ const atMethod = () => {
 /**
  * Removes the last element of the array, and then removes the comma that follows it.
  */
-const popMethod = async () => {
-  const element = arraypage().at(-1);
+const popMethod = async (element = arraypage().at(-1)) => {
   if (element) {
     try {
-      let state = await element?.animate(ANI.wobbleHorBottom, {
-        duration: 250,
-        iterations: 1
-      }).finished;
+      let state = await element?.animate(ANI.wobbleHorBottom, { duration: 250, iterations: 1 }).finished;
       if (state.playState === 'finished') {
         let node = element.previousSibling;
         if (node.textContent.startsWith(',')) node.remove();
@@ -57,19 +55,21 @@ const popMethod = async () => {
 /**
  * Takes the last element of the array, and inserts a new element after it.
  */
-const pushMethod = () => {
-  const newElement = prompt('Insert value:');
-  const lasElement = arraypage().at(-1);
+const pushMethod = (element) => {
+  const newElement = element ?? prompt('Insert value:');
+  const lastElement = arraypage().at(-1);
   const span = d.createElement('span');
-  span.id = +lasElement.id + 1;
+  span.id = +lastElement?.id + 1 ?? 0;
   span.textContent = newElement;
-  lasElement.after(', ', span);
-  arraypage().at(-1).animate(ANI.rollInBlurredTop, { duration: 500, iterations: 1 });
+  lastElement ? lastElement.after(', ', span) : d.querySelector('.array').appendChild(span);
+  arraypage().at(-1).animate(ANI.slideInFwdCenter, { duration: 500, iterations: 1 });
 };
 
 const fillMethod = () => {
-  const $array = d.getElementById('array');
-  popAll();
+  const n_elements = arraypage().length;
+  arraypage().map((element) => popMethod(element));
+  let element = window.prompt('Insert value:');
+  for (let i = 0; i < n_elements; i++) { pushMethod(element) }
 };
 
 /**
@@ -81,22 +81,3 @@ function setIndex() {
   });
 }
 
-function popAll() {
-  let duration = 1000;
-  arraypage().map(async (element) => {
-    duration -= 100;
-    try {
-      let state = await element?.animate(ANI.wobbleHorBottom, {
-        duration,
-        iterations: 1
-      }).finished;
-      if (state.playState === 'finished') {
-        let node = element?.previousSibling;
-        if (node?.textContent.startsWith(',')) node?.remove();
-        element?.remove();
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  });
-}

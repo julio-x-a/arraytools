@@ -19,5 +19,7 @@
   ],
   "author": "Julio Acevedo <jrab997@gmal.com>",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "sweetalert2": "^11.4.20"
+  }
 }

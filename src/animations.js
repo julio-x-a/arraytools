@@ -71,6 +71,17 @@ const pulsateFwd = [
   }
 ];
 
+const slideInFwdCenter = [
+  {
+    transform: 'translateZ(-1400px)',
+    opacity: 0
+  },
+  {
+    transform: 'translateZ(0)',
+    opacity: 1
+  }
+]
+
 const blink = [
   {
     opacity: 1
@@ -108,5 +119,6 @@ export default {
   rollInBlurredTop,
   pulsateFwd,
   blink,
-  slideOutLeft
+  slideOutLeft,
+  slideInFwdCenter
 };
